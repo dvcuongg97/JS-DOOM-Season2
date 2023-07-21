@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Homework JS</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- css main -->
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <section class="home-work">
+            <div class="container px-auto">
+                <div class="row mx-auto">
+                    <!-- left -->
+                    <div class="col-3 left-container text-center">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+                                role="tab" aria-controls="v-pills-home" aria-selected="true">Bài 1</a>
+                            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+                                role="tab" aria-controls="v-pills-profile" aria-selected="false">Bài 2</a>
+                            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
+                                role="tab" aria-controls="v-pills-messages" aria-selected="false">Bài 3</a>
+                            <a class="nav-link" id="v-pills-bai4-tab" data-toggle="pill" href="#v-pills-bai4" role="tab"
+                                aria-controls="v-pills-bai4" aria-selected="false">Bài 4</a>
+                        </div>
+                    </div>
+                    <!-- right -->
+                    <div class="col-9">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <!-- bài 1 -->
+                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                aria-labelledby="v-pills-home-tab">
+                                <h2>quản lý tuyển sinh</h2>
+                                <div class="bai-1-input py-3">
+                                    <select id="diem-chuan" class="d-block text-center w-50 mb-3" name="">
+                                        <option value="" disabled selected>Chọn điểm chuẩn</option>
+                                        <option value="21">21 ĐIỂM</option>
+                                        <option value="26">26 ĐIỂM</option>
+                                        <option value="30">30 ĐIỂM</option>
+                                    </select>
+                                    <select id="khu-vuc" class="d-block text-center w-50 mb-3" name="">
+                                        <option value="" disabled selected>Chọn khu vực</option>
+                                        <option value="2">A</option>
+                                        <option value="1">B</option>
+                                        <option value="0.5">C</option>
+                                    </select>
+                                    <select id="doi-tuong" class="d-block text-center w-50 mb-3" name="">
+                                        <option value="" disabled selected>Chọn đối tượng</option>
+                                        <option value="2.5">1</option>
+                                        <option value="2">2</option>
+                                        <option value="1.5">3</option>
+                                    </select>
+                                    <input id="diem_1" class="d-block text-center w-50 mb-3"
+                                        placeholder="Điểm môn thứ 1" type="number">
+                                    <input id="diem_2" class="d-block text-center w-50 mb-3"
+                                        placeholder="Điểm môn thứ 2" type="number">
+                                    <input id="diem_3" class="d-block text-center w-50 mb-3"
+                                        placeholder="Điểm môn thứ 3" type="number">
+                                </div>
+
+                                <div class="out-put">
+                                    <button onclick="result_b1()" type="button"
+                                        class="btn btn-outline-warning">RESULT</button>
+                                    <h3 class="mt-3" id="out-put_1"></h3>
+                                </div>
+                            </div>
+                            <!-- bài 2 -->
+                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel">
+                                <h2>Tính Tiền Điện</h2>
+                                <div class="bai-2-input py-3">
+                                    <input id="ho-ten" class="d-block text-center w-50 mb-3" placeholder="Họ và Tên"
+                                        type="text">
+                                    <input id="so-Kw-dien" class="d-block text-center w-50 mb-3"
+                                        placeholder="Số Kw điện" type="number">
+                                </div>
+                                <div class="out-put">
+                                    <button onclick="result_b2()" type="button"
+                                        class="btn btn-outline-warning">RESULT</button>
+                                    <h3 class="mt-3" id="out-put_2"></h3>
+                                </div>
+                            </div>
+                            <!-- bài 3 -->
+                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                aria-labelledby="v-pills-messages-tab">
+                                <h2>Thuế Thu Nhập Cá Nhân</h2>
+                                <div class="bai-3-input py-3">
+                                    <input id="ho-ten-b3" class="d-block text-center w-50 mb-3" placeholder="Họ và Tên"
+                                        type="text">
+                                    <input id="thu-nhap-nam" class="d-block text-center w-50 mb-3"
+                                        placeholder="Tổng thu nhập năm" type="number">
+                                    <input id="so-nguoi-phu-thuoc" class="d-block text-center w-50 mb-3"
+                                        placeholder="số người phụ thuộc" type="number">
+                                </div>
+                                <div class="out-put">
+                                    <button onclick="result_b3()" type="button"
+                                        class="btn btn-outline-warning">RESULT</button>
+                                    <h3 class="mt-3" id="out-put_3"></h3>
+                                </div>
+                            </div>
+                            <!-- bài 4 -->
+                            <div class="tab-pane fade" id="v-pills-bai4" role="tabpanel"
+                                aria-labelledby="v-pills-bai4-tab">
+                                <h2>Tính tiền cáp</h2>
+                                <div class="bai-4-input py-3">
+                                    <div class="bai-1-input py-3">
+                                        <select onchange="myFunction()" id="khach-hang"
+                                            class="d-block text-center w-50 mb-3" name="">
+                                            <option value="" disabled selected>Chọn loại khách hàng</option>
+                                            <option value="none">Nhà dân</option>
+                                            <option value="block">Doanh nghiệp
+                                            </option>
+                                        </select>
+                                        <!-- hidden -->
+                                        <input id="hidden-input" class="text-center w-50 mb-3" style="display: none;"
+                                            placeholder="Số kết nối" type="number">
+                                        <!-- ^^^hidden^^^ -->
+                                        <input id="kenh-cao-cap" class="d-block text-center w-50 mb-3"
+                                            placeholder="Số kênh cao cấp" type="number">
+                                    </div>
+                                    <div class="out-put">
+                                        <button onclick="result_b4()" type="button"
+                                            class="btn btn-outline-warning">RESULT</button>
+                                        <h3 class="mt-3" id="out-put_4"></h3>
+                                    </div>
+                                </div>
+                                <!-- end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+        <!-- js -->
+        <script src="./index.js"></script>
+        <!-- js onchange -->
+        <script>
+            function myFunction() {
+                var x = document.getElementById("khach-hang").value;
+                document.getElementById("hidden-input").style.display = x;
+            }
+        </script>
+    </body>
+</html>

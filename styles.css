@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Nunito", sans-serif;
+    color: #212f3d;
+    font-family: 'Tektur', cursive;
+}
+
+h2 {
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+
+
+.home-work {
+    background-color: #F2D7D5;
+    height: 100vh;
+}
+
+.tab-content {
+    margin-left: 5rem;
+}
+
+.row {
+    position: relative;
+    top: 200px;
+}
+
+/* input */
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    position: absolute;
+}
+
+/* left */
+
+.left-container {
+    padding: 2.5rem;
+    width: 500px;
+    background-color: #E6B0AA;
+    box-shadow: -2px -2px 2px #000,
+        5px 5px 2px #000;
+    /* border-radius: 3px; */
+}
+
+
+.nav .nav-link {
+    margin-bottom: 1rem;
+    background-color: #D98880;
+    color: #C0392B;
+    box-shadow: -1.5px -1.5px 1.5px #000, 3px 3px 3px #000;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #C0392B;
+}
+
+.nav .nav-link:hover {
+    box-shadow: 0 0 3px rgba(33, 33, 33, 1);
+    color: #000;
+}
+
+/* right */
+
+.tab-pane input,
+.tab-pane select {
+    background-color: #E6B0AA;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: none;
+    border: none;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.tab-pane input:focus,
+.tab-pane select:focus {
+    box-shadow: -2px -2px 2px #000,
+        5px 5px 2px #000;
+}
+
+.btn-outline-warning {
+    color: #000;
+}
